@@ -1,20 +1,12 @@
 {% extends "base.html" %} {% block content %}
 
 <div id="posts-grid">
-  <a class="post-preview" href="{{ url_for('post', permalink='bitwarden-passwort-manager') }}" style="background-image: url(https://blog.lucas-hild.de/wp-content/uploads/2018/03/bitwarden-passwort-manager/bitwarden-lucas-blog.jpeg)">
-    <h3>Bitwarden – Der Open Source Passwort-Manager</h3>
-    <div class="button">Artikel lesen</div>
-  </a>
-
-  <a class="post-preview" href="{{ url_for('post', permalink='eduard') }}" style="background-image: url(https://blog.lucas-hild.de/wp-content/uploads/2018/01/eduard-lucas-blog.jpg)">
-    <h3>Eduard – Die App für unsere Schule</h3>
-    <div class="button">Artikel lesen</div>
-  </a>
-
-  <a class="post-preview" href="{{ url_for('post', permalink='alexa-skill-entwickeln') }}" style="background-image: url(https://blog.lucas-hild.de/wp-content/uploads/2017/12/alexa-skill-entwickeln/amazon-alexa-entwickeln-lucas-hild.JPG)">
-    <h3>Alexa Skill entwickeln</h3>
-    <div class="button">Artikel lesen</div>
-  </a>
+  {% for post in posts %}
+    <a class="post-preview" href="{{ url_for('post', permalink=post.permalink) }}" style="background-image: url({{ post.image }})">
+      <h3>{{ post.title }}</h3>
+      <div class="button">Artikel lesen</div>
+    </a>
+  {% endfor %}
 </div>
 
 {% endblock %}

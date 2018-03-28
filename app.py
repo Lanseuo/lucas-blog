@@ -9,7 +9,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    current_path = os.path.dirname(os.path.realpath(__file__))
+    all_files = os.listdir(current_path + "/posts")
+
+    posts = []
+
+    for file_name in all_files:
+        file_path = current_path + "/posts/" + file_name
+        posts.append(convert(file_path))
+
+    # Order posts by date
+    posts = posts[::-1]
+
+    return render_template("index.html", posts=posts)
 
 
 @app.route("/<string:permalink>")

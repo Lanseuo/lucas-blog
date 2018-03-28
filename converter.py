@@ -72,6 +72,10 @@ def decrease_heading(html):
 
 
 
+def fix_src_if_img(src, permalink):
+    return "/static/posts/{}/{}".format(permalink, src)
+
+
 def convert(filename):
     """Convert markdown to html"""
     with open(filename, "r") as f:
@@ -91,8 +95,9 @@ def convert(filename):
 
     result = {
         "title": md.Meta["title"][0],
+        "permalink": permalink,
         "date": convert_date(date),
-        "image": md.Meta["image"][0],
+        "image": fix_src_if_img(md.Meta["image"][0], permalink),
         "description": md.Meta["description"][0],
         "content": decrease_heading(replace_images(html, permalink=permalink))
     }
