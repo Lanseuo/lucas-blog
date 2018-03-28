@@ -1,8 +1,8 @@
 import os
-
 from flask import Flask, render_template, redirect, url_for
 from livereload import Server
 
+from converter import convert
 
 app = Flask(__name__)
 
@@ -22,11 +22,14 @@ def post(permalink):
         return redirect(url_for("index"))
 
     file_name = list(filter(lambda x: permalink in x, all_files))[0]
+    file = current_path + "/posts/" + file_name
+    post_details = convert(file)
 
-    with open(current_path + "/posts/" + file_name) as f:
-        content = f.read()
+    print(post_details)
 
-    return render_template("post.html", title=permalink, content=content)
+    return render_template("post.html",
+                           title=post_details["title"],
+                           content=post_details["content"])
 
 
 if __name__ == "__main__":
