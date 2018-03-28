@@ -21,7 +21,19 @@ def index():
     # Order posts by date
     posts = posts[::-1]
 
-    return render_template("index.html", posts=posts)
+    return render_template("index.html",
+                           site_title="Lucas Blog - Softwareentwicklung",
+                           og={
+                               "title": "Lucas Blog - Softwareentwicklung",
+                               "description": "Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
+                               "image": "https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg",
+                               "url": "https://blog.lucas-hild.de",
+                               "type": "blog"
+                           },
+                           seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
+                           header_title="Lucas Blog",
+                           header_image="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg",
+                           posts=posts)
 
 
 @app.route("/<string:permalink>")
@@ -36,6 +48,17 @@ def post(permalink):
             post_details = convert(file_path)
 
             return render_template("post.html",
+                                   site_title=post_details["title"] + "| Lucas Blog",
+                                   og={
+                                       "title": post_details["title"] + "| Lucas Blog",
+                                       "description": post_details["description"],
+                                       "image": "https://blog.lucas-hild.de" + post_details["image"],
+                                       "url": "https://blog.lucas-hild.de" + "/" + permalink,
+                                       "type": "article"
+                                   },
+                                   seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
+                                   header_title=post_details["title"],
+                                   header_image=post_details["image"],
                                    title=post_details["title"],
                                    date=post_details["title"],
                                    image=post_details["image"],
