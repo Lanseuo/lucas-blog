@@ -1,0 +1,34 @@
+#posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+#posts-grid .post-preview {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+#posts-grid .post-preview .button {
+  display: none;
+}
+
+#posts-grid .post-preview:hover > h3 {
+  display: none;
+}
+
+#posts-grid .post-preview:hover > .button {
+  display: block;
+}

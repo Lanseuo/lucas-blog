@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta+Mahee');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+*:focus {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+input:required:invalid {
+  outline: none;
+}
+
+p, a {
+  font-family: 'Mukta Mahee', sans-serif;
+  font-size: 1.1em;
+}
+
+main, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.5em;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  padding: 0 100px;
+  position: fixed;
+  z-index: 3;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  height: 100px;
+}
+
+nav.visible {
+  visibility: visible;
+  background-color: rgb(21, 144, 219);
+}
+
+.button {
+  background-color: rgb(21, 144, 219);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 2px;
+}
+
+.button:hover {
+  color: white !important;
+}
+
+#header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 500px;
+  width: 100vw;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 1;
+  color: white;
+}
+
+#header-content {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header #header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#header #header-content h1 {
+  font-size: 3em;
+  margin: 10px 0;
+  transition: all 0.2s linear;
+  z-index: 4;
+}
+
+#header #header-content h1.go-to-navbar {
+  position: fixed;
+  left: 100px;
+  top: 40px;
+  letter-spacing: 0.05em;
+  z-index: 600;
+  line-height: 0px;
+  display: inline;
+  color: white;
+  font-size: 24px;
+}
+
+main {
+  width: 70%;
+  margin: 75px auto;
+}
+
+#footer {
+  background-color: rgb(21, 144, 219);
+  padding: 10px 0;
+}
+
+#footer #social-profiles {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer #social-profiles a svg {
+  width: 50px;
+  margin: 0 5px;
+}
+
+#footer #copyright {
+  text-align: center;
+  color: white;
+}
