@@ -31,7 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   font-family: 'Fjalla One', sans-serif;
   text-transform: uppercase;
 }
@@ -100,6 +100,12 @@ nav.visible {
   margin: 10px 0;
   transition: all 0.2s linear;
   z-index: 4;
+}
+
+#header #header-content a {
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1em;
 }
 
 #header #header-content h1.go-to-navbar {

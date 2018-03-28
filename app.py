@@ -17,19 +17,21 @@ def post(permalink):
     current_path = os.path.dirname(os.path.realpath(__file__))
     all_files = os.listdir(current_path + "/posts")
 
-    # If post doesn't exist
-    if not list(filter(lambda x: permalink in x, all_files)):
-        return redirect(url_for("index"))
+    # Find file
+    for file_name in all_files:
+        if file_name[11:-3] == permalink:
+            file_path = current_path + "/posts/" + file_name
+            post_details = convert(file_path)
 
-    file_name = list(filter(lambda x: permalink in x, all_files))[0]
-    file = current_path + "/posts/" + file_name
-    post_details = convert(file)
+            return render_template("post.html",
+                                   title=post_details["title"],
+                                   date=post_details["title"],
+                                   image=post_details["image"],
+                                   description=post_details["description"],
+                                   content=post_details["content"])
 
-    print(post_details)
-
-    return render_template("post.html",
-                           title=post_details["title"],
-                           content=post_details["content"])
+    # No file was found
+    return redirect(url_for("index"))
 
 
 if __name__ == "__main__":

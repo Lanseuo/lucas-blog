@@ -3,7 +3,6 @@ import re
 
 
 def convert_date(date):
-    print(date)
     day = date.split("-")[2]
 
     if date.split("-")[1] == "01":
@@ -64,6 +63,15 @@ def replace_images_sub(alt, src, permalink):
 </figure>""".format(alt=alt, src=src, permalink=permalink)
 
 
+def decrease_heading(html):
+    return html.replace("<h5>", "<h6>").replace("</h5>", "</h6>") \
+        .replace("<h4>", "<h5>").replace("</h4>", "</h5>") \
+        .replace("<h3>", "<h4>").replace("</h3>", "</h4>") \
+        .replace("<h2>", "<h3>").replace("</h2>", "</h3>") \
+        .replace("<h1>", "<h2>").replace("</h1>", "</h2>") \
+
+
+
 def convert(filename):
     """Convert markdown to html"""
     with open(filename, "r") as f:
@@ -73,17 +81,20 @@ def convert(filename):
     md = markdown.Markdown(extensions=["markdown.extensions.meta"])
     html = md.convert(markdown_file)
 
-    # Get permalink from filename (e. g. 2018-03-28-bitwarden-passwort-manager.md)
+    # Parse permalink out of filename (e. g. 2018-03-28-bitwarden-passwort-manager.md)
     #                                               ^                        ^
     permalink = re.sub(r"[-_\w/]*\d\d\d\d-\d\d-\d\d-([\w\d_-]*).md",
                        lambda x: x.group(1), filename)
 
+    # Parse date out of filename
+    date = re.findall("\d\d\d\d-\d\d-\d\d", filename)[0]
+
     result = {
         "title": md.Meta["title"][0],
-        "date": convert_date(md.Meta["date"][0]),
-        "content": replace_images(html, permalink=permalink),
+        "date": convert_date(date),
         "image": md.Meta["image"][0],
-        "description": md.Meta["description"][0]
+        "description": md.Meta["description"][0],
+        "content": decrease_heading(replace_images(html, permalink=permalink))
     }
 
     return result
