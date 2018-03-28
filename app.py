@@ -58,6 +58,7 @@ def post(permalink):
                                    },
                                    seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
                                    header_title=post_details["title"],
+                                   header_text=post_details["date"],
                                    header_image=post_details["image"],
                                    title=post_details["title"],
                                    date=post_details["title"],
