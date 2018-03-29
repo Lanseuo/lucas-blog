@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta+Mahee');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+
 
 *:focus {
   outline-style: none;
@@ -39,6 +41,19 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: black;
+}
+
+pre {
+  font-family: 'Fira Mono', monospace;
+  padding: 20px;
+}
+
+/* Used to create to codeboxes using markdown
+Usage:    &zwj;
+          {: .break-code }
+*/
+.break-code {
+  display: none;
 }
 
 nav {

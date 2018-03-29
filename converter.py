@@ -82,7 +82,9 @@ def convert(filename):
         markdown_file = f.read()
 
     # Convert markdown to html
-    md = markdown.Markdown(extensions=["markdown.extensions.meta"])
+    md = markdown.Markdown(extensions=["markdown.extensions.meta",
+                                       "markdown.extensions.codehilite",
+                                       "markdown.extensions.attr_list"])
     html = md.convert(markdown_file)
 
     # Parse permalink out of filename (e. g. 2018-03-28-bitwarden-passwort-manager.md)
