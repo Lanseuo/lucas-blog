@@ -1,5 +1,11 @@
 article .img-wrapper, article .img-wrapper img {
   max-width: 100%;
+  margin-bottom: 40px;
+}
+
+article .img-wrapper img {
+  display: block;
+  margin: 20px auto;
 }
 
 article .img-wrapper figcaption {
