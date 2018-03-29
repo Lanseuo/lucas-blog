@@ -37,7 +37,7 @@ def convert_date(date):
 
 def replace_images(html, permalink):
     """Find all images and pass them to replace_images_sub"""
-    return re.sub(r"<p><img alt=\"([\s\w]*)\" src=\"([\s\w:/\.-]*)\" /></p>",
+    return re.sub(r"<p><img alt=\"([\:\s\w-]*)\" src=\"([\s\w:/\.-]*)\" /></p>",
                   lambda x: replace_images_sub(x.group(1), x.group(2), permalink),
                   html)
     return html
@@ -72,7 +72,7 @@ def decrease_heading(html):
 
 
 
-def fix_src_if_img(src, permalink):
+def fix_src_of_img(src, permalink):
     return "/static/posts/{}/{}".format(permalink, src)
 
 
@@ -97,7 +97,7 @@ def convert(filename):
         "title": md.Meta["title"][0],
         "permalink": permalink,
         "date": convert_date(date),
-        "image": fix_src_if_img(md.Meta["image"][0], permalink),
+        "image": fix_src_of_img(md.Meta["image"][0], permalink),
         "description": md.Meta["description"][0],
         "content": decrease_heading(replace_images(html, permalink=permalink))
     }

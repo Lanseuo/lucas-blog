@@ -12,13 +12,16 @@ def index():
     current_path = os.path.dirname(os.path.realpath(__file__))
     all_files = os.listdir(current_path + "/posts")
 
+    # Sort posts by date
+    all_files.sort()
+
     posts = []
 
     for file_name in all_files:
         file_path = current_path + "/posts/" + file_name
         posts.append(convert(file_path))
 
-    # Order posts by date
+    # Reverse order of posts, so that newest post is the first one
     posts = posts[::-1]
 
     return render_template("index.html",

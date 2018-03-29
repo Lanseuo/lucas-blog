@@ -14,3 +14,11 @@ article blockquote {
   border-radius: 2px;
   color: white;
 }
+
+article a {
+  color: rgb(2, 180, 95);
+}
+
+article a:hover {
+  color: rgb(96, 210, 156);
+}
