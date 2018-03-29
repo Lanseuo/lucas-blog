@@ -50,6 +50,13 @@ a {
 pre {
   font-family: 'Fira Mono', monospace;
   padding: 20px;
+
+  /* Make line break if line is too long */
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
 
 /* Used to create to codeboxes using markdown
@@ -167,4 +174,31 @@ main {
 #footer #copyright {
   text-align: center;
   color: white;
+}
+
+@media (max-width: 750px) {
+  nav {
+    height: 75px;
+  }
+
+  #header {
+    height: 300px;
+  }
+
+  #header #header-content h1 {
+    text-align: center;
+  }
+
+  #header #header-content h1.go-to-navbar {
+    width: 100%;
+    left: 0;
+    top: 28px;
+    text-align: center;
+    letter-spacing: -0.04em;
+  }
+
+  main {
+    width: 95%;
+    margin: 25px auto;
+  }
 }

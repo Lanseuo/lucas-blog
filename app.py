@@ -76,4 +76,4 @@ def post(permalink):
 if __name__ == "__main__":
     app.debug = True
     server = Server(app.wsgi_app)
-    server.serve()
+    server.serve(host="0.0.0.0")
