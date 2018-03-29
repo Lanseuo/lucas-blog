@@ -3,15 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
 
 
+:root {
+  --primary-color: rgb(21, 144, 219);
+}
+
 *:focus {
   outline-style: none;
   -moz-outline-style: none;
 }
 
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-     box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 input:required:invalid {
@@ -67,11 +71,11 @@ nav {
 
 nav.visible {
   visibility: visible;
-  background-color: rgb(21, 144, 219);
+  background-color: var(--primary-color);
 }
 
 .button {
-  background-color: rgb(21, 144, 219);
+  background-color: var(--primary-color);
   color: white;
   padding: 20px 40px;
   border-radius: 2px;
@@ -146,7 +150,7 @@ main {
 }
 
 #footer {
-  background-color: rgb(21, 144, 219);
+  background-color: var(--primary-color);
   padding: 10px 0;
 }
 
