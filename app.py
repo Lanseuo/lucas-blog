@@ -51,7 +51,7 @@ def post(permalink):
             post_details = convert(file_path)
 
             return render_template("post.html",
-                                   site_title=post_details["title"] + "| Lucas Blog",
+                                   site_title=post_details["title"] + " | Lucas Blog",
                                    og={
                                        "title": post_details["title"] + "| Lucas Blog",
                                        "description": post_details["description"],

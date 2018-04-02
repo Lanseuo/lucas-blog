@@ -37,7 +37,7 @@ def convert_date(date):
 
 def replace_images(html, permalink):
     """Find all images and pass them to replace_images_sub"""
-    return re.sub(r"<p><img alt=\"([\:\s\w-]*)\" src=\"([\s\w:/\.-]*)\" /></p>",
+    return re.sub(r"<p><img alt=\"([\:\s\w-]*)\" src=\"([\s\w:/\.-\_]*)\" /></p>",
                   lambda x: replace_images_sub(x.group(1), x.group(2), permalink),
                   html)
     return html
