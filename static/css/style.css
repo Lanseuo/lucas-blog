@@ -59,6 +59,33 @@ pre {
   word-wrap: break-word;
 }
 
+/* Alert box */
+.alert {
+  margin: auto;
+  width: 75%;
+  padding: 2px;
+  margin-bottom: 15px;
+}
+
+.alert p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.alert .closebtn {
+  margin-left: 15px;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert .closebtn:hover {
+  color: black;
+}
+
 /* Used to create to codeboxes using markdown
 Usage:    &zwj;
           {: .break-code }
@@ -156,6 +183,51 @@ main {
   margin: 75px auto;
 }
 
+#newsletter {
+  background-color: #eeeeee;
+  padding: 10px 0;
+}
+
+#newsletter #newsletter-content {
+  width: 70%;
+  margin: 75px auto;
+}
+
+#newsletter h2 {
+  text-align: center;
+}
+
+#newsletter form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#newsletter input {
+  border: 0;
+  width: 75%;
+  height: 50px;
+  margin-bottom: 5px;
+  padding: 4px;
+  text-align: center;
+  background-color: white;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#newsletter button {
+  height: 50px;
+  background: rgb(21, 144, 219);
+  border: 0;
+  color: white;
+  width: 75%;
+  cursor: pointer;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 #footer {
   background-color: var(--primary-color);
   padding: 10px 0;
@@ -177,6 +249,10 @@ main {
 }
 
 @media (max-width: 750px) {
+  .alert {
+    width: 100%;
+  }
+
   nav {
     height: 75px;
   }
@@ -200,5 +276,14 @@ main {
   main {
     width: 95%;
     margin: 25px auto;
+  }
+
+  #newsletter #newsletter-content {
+    width: 95%;
+    margin: 25px auto;
+  }
+
+  #newsletter input, #newsletter button {
+    width: 100%;
   }
 }

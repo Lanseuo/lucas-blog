@@ -23,6 +23,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/newsletter.js') }}"></script>
 </head>
 <body>
   {% include 'includes/header.html' %}
@@ -30,6 +31,8 @@
   <main>
     {% block content %}{% endblock %}
   </main>
+
+  {% include 'includes/newsletter.html' %}
 
   {% include 'includes/footer.html' %}
 
