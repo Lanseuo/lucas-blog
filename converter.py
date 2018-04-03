@@ -37,7 +37,7 @@ def convert_date(date):
 
 def replace_images(html, permalink):
     """Find all images and pass them to replace_images_sub"""
-    return re.sub(r"<p><img alt=\"([\:\s\w-]*)\" src=\"([\s\w:/\.-\_]*)\" /></p>",
+    return re.sub(r"<p><img alt=\"([^\"]*)\" src=\"([^\"]*)\" /></p>",
                   lambda x: replace_images_sub(x.group(1), x.group(2), permalink),
                   html)
     return html
@@ -76,6 +76,22 @@ def fix_src_of_img(src, permalink):
     return "/static/posts/{}/{}".format(permalink, src)
 
 
+def target_blank_for_external_links(html):
+    """Find all links and pass them to target_blank_for_external_links_sub"""
+    return re.sub(r"<a href=\"([^\"]*)\">",
+                  lambda x: target_blank_for_external_links_sub(x.group(0)),
+                  html)
+    return html
+
+
+def target_blank_for_external_links_sub(a):
+    if "http" in a and not "https://blog.lucas-hild.de" in a:
+        href = re.match(r"<a href=\"([^\"]*)\">", a).group(1)
+        return "<a href=\"{}\" target=\"_blank\">".format(href)
+    else:
+        return a
+
+
 def convert(filename):
     """Convert markdown to html"""
     with open(filename, "r") as f:
@@ -95,13 +111,17 @@ def convert(filename):
     # Parse date out of filename
     date = re.findall("\d\d\d\d-\d\d-\d\d", filename)[0]
 
+    html = target_blank_for_external_links(html)
+    html = decrease_heading(html)
+    html = replace_images(html, permalink=permalink)
+
     result = {
         "title": md.Meta["title"][0],
         "permalink": permalink,
         "date": convert_date(date),
         "image": fix_src_of_img(md.Meta["image"][0], permalink),
         "description": md.Meta["description"][0],
-        "content": decrease_heading(replace_images(html, permalink=permalink))
+        "content": html
     }
 
     return result

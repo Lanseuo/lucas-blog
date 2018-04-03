@@ -10,7 +10,7 @@ Vom 13. bis zum 15. Oktober war ich bei Hack To The Future, einem Hackathon im R
 
 Am Freitag trafen wir uns mit 40 anderen Jugendlichen und 15 Mentoren im shackspace, einem Hackerspace in Stuttgart. Dort teilten wir uns in verschiedene Themenräume, die uns interessierten, ein. Wir überlegten in kleineren Gruppen, welche Probleme wir in den verschiedenen Bereichen finden konnten und mit wie man diese lösen könnte. Danach erstellten wir für jeden Lösungsvorschlag ein Plakat. Später konnten sich alle Teilnehmer die Plakate anschauen und sich entscheiden, in welches Team sie gehen.
 
-[![shackspace (Foto: Jeanette Bak Photography)](httfs-1.jpg)
+![shackspace (Foto: Jeanette Bak Photography)](httfs-1.jpg)
 
 Ich ging in ein Team, in dem wir einen interaktiven Vokabeltrainer entwickeln wollten. Zu viert kamen wir dann auf die Idee, dass man ein Ranking zwischen den Klassenkameraden einbauen könnte, dass die Schüler motivieren soll. Damit war auch schon der erste Tag zu Ende.
 
