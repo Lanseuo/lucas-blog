@@ -6,7 +6,7 @@ description: Vorab die neue Android-Version 7 Nougat mit neuen Funktionen auf de
 
 Am 22. August 2016 veröffentlichte Google die neuste Android-Version mit dem Namen Android 7 Nougat. Zu den Neuerungen gehören der Multi-Window-Modus, bessere Energiesparfunktionen und Google's neue Virtual Reality Plattform Daydream. Wer kein Nexus-Smartphone hat, aber trotzdem das neue Update schoneinmal ausprobieren möchte, kann das Image für Raspberry Pi 3 ausprobieren.
 
-![Benachrichtigungsleiste](DSC_0960.gif)
+![Benachrichtigungsleiste](https://i.imgur.com/6KtqVx2.gif)
 
 # Installation
 
