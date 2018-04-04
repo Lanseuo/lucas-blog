@@ -73,6 +73,8 @@ def post(permalink):
     return redirect(url_for("index"))
 
 
+from feed import *
+
 if __name__ == "__main__":
     app.debug = True
     server = Server(app.wsgi_app)

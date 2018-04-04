@@ -1,7 +1,7 @@
 ---
 title: Hallo Welt!
 image: DSC_0796.JPG
-description: DSC_0796.JPG
+description: Herzlich Willkommen auf meinem neuen Blog.
 ---
 
 Hallo und Herzlich Willkommen auf meiner neuen Webseiten.

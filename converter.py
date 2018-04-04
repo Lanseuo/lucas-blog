@@ -1,5 +1,6 @@
 import markdown
 import re
+from datetime import datetime
 
 
 def convert_date(date):
@@ -119,6 +120,7 @@ def convert(filename):
         "title": md.Meta["title"][0],
         "permalink": permalink,
         "date": convert_date(date),
+        "date_time": datetime.strptime(date, "%Y-%m-%d"),
         "image": fix_src_of_img(md.Meta["image"][0], permalink),
         "description": md.Meta["description"][0],
         "content": html
