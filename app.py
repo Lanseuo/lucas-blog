@@ -39,6 +39,11 @@ def index():
                            posts=posts)
 
 
+@app.route("/<int:year>/<int:month>/<permalink>")
+def wp_post(year, month, permalink):
+    return redirect(url_for("post", permalink=permalink))
+
+
 @app.route("/<string:permalink>")
 def post(permalink):
     current_path = os.path.dirname(os.path.realpath(__file__))
