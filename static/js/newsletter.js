@@ -8,6 +8,8 @@ $(document).ready(function () {
     $('#newsletter-success p').text('');
     $('#newsletter-error p').text('');
 
+    $('.newsletter-spinner').show();
+
     // Post data to api
     $.ajax({
         data: {
@@ -20,9 +22,11 @@ $(document).ready(function () {
 
       .done(function (data) {
         if (data.error) {
+          $('.newsletter-spinner').hide();
           $('#newsletter-alert').css('border', '3px solid rgb(218, 13, 61)');
           $('#newsletter-alert p').text(data.error);
         } else if (data.success == 'subscribed') {
+          $('.newsletter-spinner').hide();
           $('#newsletter-alert').css('border', '3px solid rgb(66, 181, 131)');
           $('#newsletter-alert p').append('Vielen Dank fürs Anmelden!');
 
