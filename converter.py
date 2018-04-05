@@ -95,7 +95,7 @@ def target_blank_for_external_links_sub(a):
 
 def convert(filename):
     """Convert markdown to html"""
-    with open(filename, "r") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         markdown_file = f.read()
 
     # Convert markdown to html
