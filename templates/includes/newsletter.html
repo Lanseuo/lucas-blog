@@ -3,19 +3,19 @@
     <h2>Newsletter</h2>
     <p>Abonniere meinen Newsletter, um einmal im Monat einen Newsletter zu erhalten. Du erfährst, welche neuen Artikel es auf meinem Blog gibt und welche Artikel ich in diesen Monat entdeckt habe.</p>
 
-    <div id="newsletter-alert" class="alert" style="display: none;">
-      <span class="closebtn">&times;</span>
-      <p></p>
-    </div>
-
-    <div class="newsletter-spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
-    </div>
-
     <form id="newsletter-form">
-      <input id="newsletter-source" name="source" value="website" type="hidden">
+      <div id="newsletter-alert" class="alert" style="display: none;">
+        <span class="closebtn">&times;</span>
+        <p></p>
+      </div>
+
+      <div class="newsletter-spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+
+      <input id="newsletter-source" name="source" value="blog-footer" type="hidden">
       <input id="newsletter-mail" name="mail" placeholder="Deine Mail" required="" type="text"><br>
       <button id="newsletter-button" type="submit">Abonnieren</button>
     </form>

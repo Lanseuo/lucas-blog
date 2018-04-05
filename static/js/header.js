@@ -1,6 +1,5 @@
 $(window).ready(function() {
   let headerTitle = $('#header-content h1 a').text();
-  console.log(headerTitle);
 
   $(window).scroll(function(event) {
     $('nav').css('position', 'fixed');

@@ -26,6 +26,7 @@ $(document).ready(function () {
           $('#newsletter-alert').css('border', '3px solid rgb(218, 13, 61)');
           $('#newsletter-alert p').text(data.error);
         } else if (data.success == 'subscribed') {
+          localStorage.setItem('subscribedNewsletter', true);
           $('.newsletter-spinner').hide();
           $('#newsletter-alert').css('border', '3px solid rgb(66, 181, 131)');
           $('#newsletter-alert p').append('Vielen Dank fürs Anmelden!');
@@ -45,3 +46,43 @@ $(document).ready(function () {
     $(this).parent().fadeOut(500);
   });
 });
+
+function submitNewsletterModalForm() {
+  // Hide (old) alert boxes
+  $('#newsletter-modal-success').hide();
+  $('#newsletter-modal-error').hide();
+  $('#newsletter-modal-success p').text('');
+  $('#newsletter-modal-error p').text('');
+
+  $('.newsletter-modal-spinner').show();
+
+  // Post data to api
+  $.ajax({
+      data: {
+        source: $('#newsletter-modal-source').val(),
+        mail: $('#newsletter-modal-mail').val(),
+      },
+      type: 'POST',
+      url: 'https://lanseuo.herokuapp.com/newsletter/subscribe',
+    })
+
+    .done(function (data) {
+      if (data.error) {
+        $('.newsletter-modal-spinner').hide();
+        $('#newsletter-modal-alert').css('border', '3px solid rgb(218, 13, 61)');
+        $('#newsletter-modal-alert p').text(data.error);
+      } else if (data.success == 'subscribed') {
+        localStorage.setItem('subscribedNewsletter', true);
+        $('.newsletter-modal-spinner').hide();
+        $('#newsletter-modal-alert').css('border', '3px solid rgb(66, 181, 131)');
+        $('#newsletter-modal-alert p').append('Vielen Dank fürs Anmelden!');
+
+        // Clear input fields
+        $('#newsletter-modal-mail').val('');
+      }
+      $('#newsletter-modal-alert').fadeIn(500);
+      $('#newsletter-modal-alert').css('display', 'block');
+    });
+
+  return false;
+}
