@@ -44,6 +44,11 @@ def wp_post(year, month, permalink):
     return redirect(url_for("post", permalink=permalink))
 
 
+@app.route("/wp-content/uploads/<int:year>/<int:month>/<string:permalink>/<string:filename>")
+def wp_media(year, month, permalink, filename):
+    return app.send_static_file("posts/" + permalink + "/" + filename)
+
+
 @app.route("/<string:permalink>")
 def post(permalink):
     current_path = os.path.dirname(os.path.realpath(__file__))
