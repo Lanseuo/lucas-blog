@@ -36,7 +36,6 @@ article a:hover {
   }
 
   article .img-wrapper img {
-    display: block;
-    margin: 20px 0;
+    margin: 20px auto;
   }
 }
