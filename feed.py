@@ -1,8 +1,7 @@
-import os
 from werkzeug.contrib.atom import AtomFeed
 
 from app import app
-from converter import convert
+from posts import get_posts
 
 
 @app.route("/feed")
@@ -10,22 +9,7 @@ def atom_feed():
     feed = AtomFeed("Lucas Blog",
                     feed_url="https://blog.lucas-hild.de/feed")
 
-    current_path = os.path.dirname(os.path.realpath(__file__))
-    all_files = os.listdir(current_path + "/posts")
-
-    # Sort posts by date
-    all_files.sort()
-
-    posts = []
-
-    for file_name in all_files:
-        file_path = current_path + "/posts/" + file_name
-        posts.append(convert(file_path))
-
-    # Reverse order of posts, so that newest post is the first one
-    posts = posts[::-1]
-
-    for post in posts:
+    for post in get_posts():
         feed.add(
             title=post["title"],
             title_type="text",
