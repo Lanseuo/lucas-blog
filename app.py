@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, render_template, redirect, url_for
 from livereload import Server
 
-from converter import convert
 from posts import get_posts, get_post
 
 app = Flask(__name__)
@@ -14,13 +13,13 @@ def index():
                            og={
                                "title": "Lucas Blog - Softwareentwicklung",
                                "description": "Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
-                               "image": "https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg",
+                               "image": url_for("static", filename="img/header.jpg"),
                                "url": "https://blog.lucas-hild.de",
                                "type": "blog"
                            },
                            seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
                            header_title="Lucas Blog",
-                           header_image="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg",
+                           header_image=url_for("static", filename="img/header.jpg"),
                            posts=get_posts())
 
 
@@ -72,7 +71,19 @@ def post(permalink):
                                description=post_details["description"],
                                content=post_details["content"])
     else:
-        return redirect(url_for("index"))
+        return render_template("index.html",
+                               site_title="404 | Lucas Blog",
+                               og={
+                                   "title": "Lucas Blog - Softwareentwicklung",
+                                   "description": "Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
+                                   "image": url_for("static", filename="img/404.jpg"),
+                                   "url": "https://blog.lucas-hild.de",
+                                   "type": "blog"
+                               },
+                               seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
+                               header_title="Seite nicht gefunden",
+                               header_image=url_for("static", filename="img/404.jpg"),
+                               posts=get_posts()), 404
 
 
 from feed import *
