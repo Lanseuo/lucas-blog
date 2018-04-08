@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, render_template, redirect, url_for
 from livereload import Server
 
-from posts import get_posts, get_post
+import posts
+# from posts import get_posts, get_post
 
 app = Flask(__name__)
 
@@ -20,12 +21,12 @@ def index():
                            seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
                            header_title="Lucas Blog",
                            header_image=url_for("static", filename="img/header.jpg"),
-                           posts=get_posts())
+                           posts=posts.get_posts())
 
 
 @app.route("/<int:year>/<int:month>/<permalink>")
 def wp_post(year, month, permalink):
-    return redirect(url_for("post", permalink=permalink))
+    return redirect(url_for("post_view", permalink=permalink))
 
 
 @app.route("/wp-content/uploads/<int:year>/<int:month>/<string:permalink>/<string:filename>")
@@ -35,21 +36,21 @@ def wp_media(year, month, permalink, filename):
 
 @app.route("/api/posts")
 def api_posts():
-    return jsonify(get_posts())
+    return jsonify(posts.get_posts())
 
 
 @app.route("/api/posts/<string:permalink>")
 def api_post(permalink):
-    post_details = get_post(permalink)
+    post_details = posts.get_post(permalink)
     if post_details:
         return jsonify(post_details)
     else:
-        return jsonify({}), 404
+        return jsonify({"error": "post not found"}), 404
 
 
 @app.route("/<string:permalink>")
-def post(permalink):
-    post_details = get_post(permalink)
+def post_view(permalink):
+    post_details = posts.get_post(permalink)
 
     if post_details:
         return render_template("post.html",
@@ -83,7 +84,7 @@ def post(permalink):
                                seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
                                header_title="Seite nicht gefunden",
                                header_image=url_for("static", filename="img/404.jpg"),
-                               posts=get_posts()), 404
+                               posts=posts.get_posts()), 404
 
 
 from feed import *

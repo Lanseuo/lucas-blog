@@ -14,7 +14,9 @@ def get_posts():
 
     for file_name in all_files:
         file_path = current_path + "/posts/" + file_name
-        posts.append(convert(file_path))
+        post = convert(file_path)
+        if post:
+            posts.append(post)
 
     # Reverse order of posts, so that newest post is the first one
     posts = posts[::-1]

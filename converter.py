@@ -2,6 +2,8 @@ import markdown
 import re
 from datetime import datetime
 
+import app
+
 
 def convert_date(date):
     day = date.split("-")[2]
@@ -126,4 +128,8 @@ def convert(filename):
         "content": html
     }
 
-    return result
+    is_date_in_future = datetime.now().timestamp() - result["date_time"].timestamp() < 0
+    if not is_date_in_future or (is_date_in_future and app.app.debug):
+        return result
+    else:
+        return None
