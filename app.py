@@ -1,10 +1,12 @@
 from flask import Flask, jsonify, render_template, redirect, url_for
+from flask_cors import CORS
 from livereload import Server
 
 import posts
 # from posts import get_posts, get_post
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
 @app.route("/")
