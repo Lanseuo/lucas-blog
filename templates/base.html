@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,24 +21,40 @@
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-32x32.png') }}" sizes="32x32">
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-16x16.png') }}" sizes="16x16">
   <link href="{{ url_for('atom_feed') }}" rel="alternate" title="Lucas" type="application/atom+xml">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "1f6454bd-4802-45b9-a940-53f36241daaa",
+        autoRegister: false,
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+    OneSignal.push(function () {
+      OneSignal.showHttpPrompt();
+    });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   <script src="{{ url_for('static', filename='js/header.js') }}"></script>
   <script src="{{ url_for('static', filename='js/newsletter.js') }}"></script>
 </head>
-<body>
-  {% include 'includes/modal.html' %}
 
-  {% include 'includes/header.html' %}
+<body>
+  {% include 'includes/modal.html' %} {% include 'includes/header.html' %}
 
   <main>
     {% block content %}{% endblock %}
   </main>
 
-  {% include 'includes/newsletter.html' %}
-
-  {% include 'includes/footer.html' %}
+  {% include 'includes/newsletter.html' %} {% include 'includes/footer.html' %}
 
 </body>
+
 </html>

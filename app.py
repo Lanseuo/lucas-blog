@@ -22,7 +22,8 @@ def index():
                            },
                            seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
                            header_title="Lucas Blog",
-                           header_image=url_for("static", filename="img/header.jpg"),
+                           header_image=url_for(
+                               "static", filename="img/header.jpg"),
                            posts=posts.get_posts())
 
 
@@ -56,7 +57,8 @@ def post_view(permalink):
 
     if post_details:
         return render_template("post.html",
-                               site_title=post_details["title"] + " | Lucas Blog",
+                               site_title=post_details["title"] +
+                               " | Lucas Blog",
                                og={
                                    "title": post_details["title"] + "| Lucas Blog",
                                    "description": post_details["description"],
@@ -85,8 +87,24 @@ def post_view(permalink):
                                },
                                seo_description="Auf dem Blog von Lucas Hild findest Du Artikel über Softwareentwicklung mit Python, JavaScript und dem Raspberry Pi",
                                header_title="Seite nicht gefunden",
-                               header_image=url_for("static", filename="img/404.jpg"),
+                               header_image=url_for(
+                                   "static", filename="img/404.jpg"),
                                posts=posts.get_posts()), 404
+
+
+@app.route("/manifest.json")
+def manifest_json():
+    return app.send_static_file("manifest.json")
+
+
+@app.route("/OneSignalSDKUpdaterWorker.js")
+def one_signal_sdk_updater_worker_js():
+    return app.send_static_file("js/OneSignalSDKUpdaterWorker.js")
+
+
+@app.route("/OneSignalSDKWorker.js")
+def one_signal_sdk_worker_js():
+    return app.send_static_file("js/OneSignalSDKWorker.js")
 
 
 from feed import *
