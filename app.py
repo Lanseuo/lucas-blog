@@ -92,6 +92,16 @@ def post_view(permalink):
                                posts=posts.get_posts()), 404
 
 
+@app.route("/impressum")
+def imprint():
+    return redirect("https://lucas-hild.de/imprint.html")
+
+
+@app.route("/datenschutzerklaerung")
+def privacy():
+    return redirect("https://lucas-hild.de/privacy.html")
+
+
 @app.route("/manifest.json")
 def manifest_json():
     return app.send_static_file("manifest.json")

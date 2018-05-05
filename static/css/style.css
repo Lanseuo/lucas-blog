@@ -416,6 +416,18 @@ main {
   color: white;
 }
 
+#footer .footer-links {
+  text-align: center;
+}
+
+#footer .footer-links a {
+  color: white;
+}
+
+#footer .footer-links a:hover {
+  color: black;
+}
+
 @media (max-width: 750px) {
   .alert {
     width: 100%;
