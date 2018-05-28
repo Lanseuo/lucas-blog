@@ -9,7 +9,7 @@ post_folders = [
         os.path.dirname(os.path.realpath(__file__)) + "/static/posts"
     )
 ]
-F
+
 for folder in post_folders:
     images_in_post_folder = [
         folder + "/" + image

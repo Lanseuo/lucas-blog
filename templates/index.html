@@ -1,12 +1,12 @@
 {% extends "base.html" %} {% block content %}
 
 <div id="posts-grid">
-  {% for post in posts %}
+    {% for post in posts %}
     <a class="post-preview" href="{{ url_for('post_view', permalink=post.permalink) }}" style="background-image: url({{ post.image }})">
-      <h3>{{ post.title }}</h3>
-      <div class="button">Artikel lesen</div>
+        <h3>{{ post.title }}</h3>
+        <div class="button">Artikel lesen</div>
     </a>
-  {% endfor %}
+    {% endfor %}
 </div>
 
 {% endblock %}

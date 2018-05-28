@@ -41,7 +41,8 @@ def convert_date(date):
 def replace_images(html, permalink):
     """Find all images and pass them to replace_images_sub"""
     return re.sub(r"<p><img alt=\"([^\"]*)\" src=\"([^\"]*)\" /></p>",
-                  lambda x: replace_images_sub(x.group(1), x.group(2), permalink),
+                  lambda x: replace_images_sub(
+                      x.group(1), x.group(2), permalink),
                   html)
     return html
 
@@ -88,7 +89,7 @@ def target_blank_for_external_links(html):
 
 
 def target_blank_for_external_links_sub(a):
-    if "http" in a and not "https://blog.lucas-hild.de" in a:
+    if "http" in a and "https://blog.lucas-hild.de" not in a:
         href = re.match(r"<a href=\"([^\"]*)\">", a).group(1)
         return "<a href=\"{}\" target=\"_blank\">".format(href)
     else:
@@ -106,8 +107,9 @@ def convert(filename):
                                        "markdown.extensions.attr_list"])
     html = md.convert(markdown_file)
 
-    # Parse permalink out of filename (e. g. 2018-03-28-bitwarden-passwort-manager.md)
-    #                                               ^                        ^
+    # Parse permalink out of filename
+    # (e. g. 2018-03-28-bitwarden-passwort-manager.md)
+    #                   ^                        ^
     permalink = re.sub(r"[-_\w/]*\d\d\d\d-\d\d-\d\d-([\w\d_-]*).md",
                        lambda x: x.group(1), filename)
 
@@ -128,7 +130,8 @@ def convert(filename):
         "content": html
     }
 
-    is_date_in_future = datetime.now().timestamp() - result["date_time"].timestamp() < 0
+    is_date_in_future = datetime.now().timestamp() - \
+        result["date_time"].timestamp() < 0
     if not is_date_in_future or (is_date_in_future and app.app.debug):
         return result
     else:
