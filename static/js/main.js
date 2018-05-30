@@ -21,23 +21,12 @@ function initNewsletterModal() {
     if (localStorage.getItem('visited') == 2 || (localStorage.getItem('visited') == 10 && !localStorage.getItem('subscribedNewsletter'))) {
         setTimeout(() => {
             showModal('Abonniere meinen Newsletter', `
-      <p>Möchtest Du auf dem Laufendem bleiben? Du wirst maximal einmal im Monat eine E-Mail mit meinen neusten Artikel erhalten. Außerdem erfährst Du, welche Artikel ich diesen Monat gelesen und mir besonders gut gefallen haben.</p>
-      <form id="newsletter-modal-form" onSubmit="return submitNewsletterModalForm()">
-        <div id="newsletter-modal-alert" class="alert" style="display: none;">
-          <span class="closebtn" onclick="$(this).parent().fadeOut(500);">&times;</span>
-          <p></p>
-        </div>
-
-        <div class="newsletter-modal-spinner">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-        </div>
-
-        <input id="newsletter-modal-source" name="source" value="blog-modal" type="hidden">
-        <input id="newsletter-modal-mail" name="mail" placeholder="Deine Mail" required="" type="text"><br>
-        <button id="newsletter-modal-button" type="submit">Abonnieren</button>
-      </form>`);
+                <p>Möchtest Du auf dem Laufendem bleiben? Du wirst maximal einmal im Monat eine E-Mail mit meinen neusten Artikel erhalten. Außerdem erfährst Du, welche Artikel ich diesen Monat gelesen und mir besonders gut gefallen haben.</p>
+                <form id="newsletter-modal-form" onSubmit="return subscribedToNewsletter()" action="https://app.mailerlite.com/webforms/submit/s4t1t7" data-code="s4t1t7" method="post" target="_blank">
+                    <input type="email" name="fields[email]" placeholder="E-Mail" autocomplete="email" x-autocompletetype="email">
+                    <input type="hidden" name="ml-submit" value="1">
+                    <button id="newsletter-button" type="submit">Abonnieren</button>
+                </form>`);
         }, 3000);
     }
 }
