@@ -29,6 +29,10 @@ article a:hover {
   color: rgb(96, 210, 156);
 }
 
+article li {
+  margin: 17.6px 0
+}
+
 @media (max-width: 750px) {
   article .img-wrapper {
     width: 100%;
