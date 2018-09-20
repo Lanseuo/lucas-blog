@@ -9,4 +9,8 @@ MarkupSafe==1.0
 six==1.11.0
 tornado==5.0.1
 Werkzeug==0.14.1
-Pillow=5.2.0
+Pillow==5.2.0
+gunicorn
+requests
+python-twitter
+onesignal-notifications

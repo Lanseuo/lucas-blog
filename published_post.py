@@ -10,27 +10,26 @@ twitter_client = twitter.Api(config.twitter_consumer,
                              config.twitter_token,
                              config.twitter_token_secret)
 
-onesignal_client = OneSignal(
-    config.onesignal_app_id, config.onesignal_rest_api_key)
+onesignal_client = OneSignal(config.onesignal_app_id, config.onesignal_rest_api_key)
 
 
 def post_to_twitter(post):
-    twitter_client.PostUpdate("Neuer Artikel auf meinem Blog: {title} {url}".format(
-        title=post["title"],
-        url="https://blog.lucas-hild.de/" + post["permalink"]))
+    twitter_client.PostUpdate(
+        f"Neuer Artikel auf meinem Blog: {post['title']} https://blog.lucas-hild.de/{post['permalink']}")
     print("\nTweeted about post")
 
 
 def send_web_notification(post):
     notification = SegmentNotification(
-        {
-            "en": "Neuer Artikel: " + post["title"]
+        contents={
+            "en": f"Neuer Artikel: {post['title']}"
         },
-        included_segments=SegmentNotification.ALL)
+        included_segments=[SegmentNotification.ALL],
+        url=f"https://blog.lucas-hild.de/{post['permalink']}"
+    )
 
     result = onesignal_client.send(notification)
-    print("Sent OneSignal Notification to {} Recipients".format(
-          str(result["recipients"])))
+    print(f"Sent OneSignal Notification to {result['recipients']} Recipients")
 
 
 def main():
@@ -38,7 +37,7 @@ def main():
     posts = r.json()[:3]
 
     for (index, post) in enumerate(posts):
-        print("({}) {}".format(str(index), post["title"]))
+        print(f"({index}) {post['title']}")
 
     index_of_post = input("Index of post: ")
     post = posts[int(index_of_post)]
