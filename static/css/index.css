@@ -1,54 +1,72 @@
 #posts-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
 #posts-grid .post-preview {
-  margin: 0;
-  padding: 10px;
-  width: 100%;
-  height: 250px;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid transparent;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+    position: relative;
+}
+
+#posts-grid .post-preview .content {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+    padding: 10px;
+}
+
+#posts-grid .post-preview .background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+}
+
+#posts-grid .post-preview:hover .background {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
+    border: 1px solid transparent;
 }
 
 #posts-grid .post-preview .button {
-  display: none;
+    display: none;
 }
 
-#posts-grid .post-preview:hover > h3 {
-  display: none;
+#posts-grid .post-preview:hover > .content h3 {
+    display: none;
 }
 
-#posts-grid .post-preview:hover > .button {
-  display: block;
+#posts-grid .post-preview:hover > .content .button {
+    display: block;
 }
 
 @media (max-width: 750px) {
-  #posts-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #posts-grid .post-preview:hover > h3 {
-    display: block;
-  }
-
-  #posts-grid .post-preview:hover > .button {
-    display: none;
-  }
+    #posts-grid {
+        grid-template-columns: 1fr;
+    }
+  
+    #posts-grid .post-preview:hover > h3 {
+        display: block;
+    }
+    
+    #posts-grid .post-preview:hover > .button {
+        display: none;
+    }
 }
 
 @media (min-width: 751px) and (max-width: 1100px) {
-  #posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    #posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

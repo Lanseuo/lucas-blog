@@ -2,96 +2,97 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
 
-
 :root {
-  --primary-color: rgb(21, 144, 219);
+    --primary-color: rgb(21, 144, 219);
 }
 
 *:focus {
-  outline-style: none;
-  -moz-outline-style: none;
+    outline-style: none;
+    -moz-outline-style: none;
 }
 
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-   box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 input:required:invalid {
-  outline: none;
+    outline: none;
 }
 
 p, a {
-  font-family: 'Mukta Mahee', sans-serif;
-  font-size: 1.1em;
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: 1.1em;
 }
 
 main, body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-size: 1.5em; */
-  font-family: 'Fjalla One', sans-serif;
-  text-transform: uppercase;
+    /* font-size: 1.5em; */
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 pre {
-  font-family: 'Fira Mono', monospace;
-  padding: 20px;
+    font-family: 'Fira Mono', monospace;
+    padding: 20px;
 
-  /* Make line break if line is too long */
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
+    /* Make line break if line is too long */
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 /* Alert box */
+
 .alert {
-  margin: auto;
-  width: 75%;
-  padding: 2px;
-  margin-bottom: 15px;
+    margin: auto;
+    width: 75%;
+    padding: 2px;
+    margin-bottom: 15px;
 }
 
 .alert p {
-  font-size: 20px;
-  text-align: center;
+    font-size: 20px;
+    text-align: center;
 }
 
 .alert .closebtn {
-  margin-left: 15px;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .alert .closebtn:hover {
-  color: black;
+    color: black;
 }
 
 /* Used to create to codeboxes using markdown
 Usage:    &zwj;
           {: .break-code }
 */
+
 .break-code {
-  display: none;
+    display: none;
 }
 
 /*************************************
@@ -99,120 +100,108 @@ Usage:    &zwj;
 *************************************/
 
 .modal {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  display: table;
-  transition: opacity .3s ease;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
 
-  display: none; /* will be changed in main.js */
+    display: none; /* will be changed in main.js */
 }
 
 .modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .modal-container {
-  max-width: 750px;
-  width: 95%;
-  margin: 0px auto;
-  border: 0.5px solid rgba(125, 125, 125, 0.15);
-  box-shadow: 1px 1px 0.5px rgba(231, 231, 231, 0.54);
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+    max-width: 750px;
+    width: 95%;
+    margin: 0px auto;
+    border: 0.5px solid rgba(125, 125, 125, 0.15);
+    box-shadow: 1px 1px 0.5px rgba(231, 231, 231, 0.54);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .modal-header {
-  width: 100%;
-  background: var(--primary-color);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color: white;
-  padding: 15px 20px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+    width: 100%;
+    background: var(--primary-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    padding: 15px 20px;
 }
 
 .modal-close {
-  float: right;
-  cursor: pointer;
+    float: right;
+    cursor: pointer;
 }
 
 .modal-body {
-  padding: 15px 20px;
-  background: white;
+    padding: 15px 20px;
+    background: white;
 }
 
 #newsletter-modal-form {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #newsletter-modal-alert {
-  width: 100%;
+    width: 100%;
 }
 
 .newsletter-modal-spinner {
-  text-align: center;
-  display: block;
-  margin: 10px auto;
-  display: none; /* will be changed in newsletter.js */
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    display: none; /* will be changed in newsletter.js */
 }
 
 .newsletter-modal-spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
 .newsletter-modal-spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
 }
 
 .newsletter-modal-spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
 }
 
 #newsletter-modal-form input {
-  border: 0;
-  width: 100%;
-  height: 50px;
-  margin-bottom: 5px;
-  padding: 4px;
-  text-align: center;
-  background-color: white;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
-  background-color: #eeeeee;
+    border: 0;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 4px;
+    text-align: center;
+    background-color: white;
 }
 
 #newsletter-modal-form button {
-  height: 50px;
-  background: rgb(21, 144, 219);
-  border: 0;
-  color: white;
-  width: 100%;
-  cursor: pointer;
-
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+    height: 50px;
+    background: rgb(21, 144, 219);
+    border: 0;
+    color: white;
+    width: 100%;
+    cursor: pointer;
 }
 
 /*************************************
@@ -220,250 +209,244 @@ Usage:    &zwj;
 *************************************/
 
 nav {
-  padding: 0 100px;
-  position: fixed;
-  z-index: 3;
-  transition: all 0.2s ease-in-out;
-  visibility: hidden;
-  height: 100px;
+    padding: 0 100px;
+    position: fixed;
+    z-index: 3;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    height: 100px;
 }
 
 nav.visible {
-  visibility: visible;
-  background-color: var(--primary-color);
+    visibility: visible;
+    background-color: var(--primary-color);
 }
 
 .button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 20px 40px;
-  border-radius: 2px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 2px;
 }
 
 .button:hover {
-  color: white !important;
+    color: white !important;
 }
 
 #header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  height: 500px;
-  width: 100vw;
-  display: table-cell;
-  vertical-align: middle;
-  z-index: 1;
-  color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 500px;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 1;
+    color: white;
 }
 
 #header-content {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #header #header-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 #header #header-content h1 {
-  font-size: 3em;
-  margin: 10px 0;
-  transition: all 0.2s linear;
-  z-index: 4;
+    font-size: 3em;
+    margin: 10px 0;
+    transition: all 0.2s linear;
+    z-index: 4;
 }
 
 #header #header-content a {
-  color: white;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 1em;
+    color: white;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1em;
 }
 
 #header #header-content h1.go-to-navbar {
-  position: fixed;
-  left: 100px;
-  top: 40px;
-  letter-spacing: 0.05em;
-  z-index: 600;
-  line-height: 0px;
-  display: inline;
-  color: white;
-  font-size: 24px;
+    position: fixed;
+    left: 100px;
+    top: 40px;
+    letter-spacing: 0.05em;
+    z-index: 600;
+    line-height: 0px;
+    display: inline;
+    color: white;
+    font-size: 24px;
 }
 
 #header #header-content p {
-  font-style: italic;
-  margin: 0;
-  font-size: 1.5em;
+    font-style: italic;
+    margin: 0;
+    font-size: 1.5em;
 }
 
 main {
-  width: 70%;
-  margin: 75px auto;
+    width: 70%;
+    margin: 75px auto;
 }
 
 #newsletter {
-  background-color: #eeeeee;
-  padding: 10px 0;
+    background-color: #eeeeee;
+    padding: 10px 0;
 }
 
 #newsletter #newsletter-content {
-  width: 70%;
-  margin: 75px auto;
+    width: 70%;
+    margin: 75px auto;
 }
 
 #newsletter h2 {
-  text-align: center;
+    text-align: center;
 }
 
 #newsletter form {
-  margin: 0 auto;
-  text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .newsletter-spinner {
-  text-align: center;
-  display: block;
-  margin: 10px auto;
-  display: none; /* will be changed in newsletter.js */
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    display: none; /* will be changed in newsletter.js */
 }
 
 .newsletter-spinner > div {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
-
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
 .newsletter-spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
 }
 
 .newsletter-spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
 }
 
 #newsletter input {
-  border: 0;
-  width: 75%;
-  height: 50px;
-  margin-bottom: 5px;
-  padding: 4px;
-  text-align: center;
-  background-color: white;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+    border: 0;
+    width: 75%;
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 4px;
+    text-align: center;
+    background-color: white;
 }
 
 #newsletter button {
-  height: 50px;
-  background: rgb(21, 144, 219);
-  border: 0;
-  color: white;
-  width: 75%;
-  cursor: pointer;
-
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+    height: 50px;
+    background: rgb(21, 144, 219);
+    border: 0;
+    color: white;
+    width: 75%;
+    cursor: pointer;
 }
 
 #footer {
-  background-color: var(--primary-color);
-  padding: 10px 0;
+    background-color: var(--primary-color);
+    padding: 10px 0;
 }
 
 #footer #social-profiles {
-  text-align: center;
-  padding: 10px 0;
+    text-align: center;
+    padding: 10px 0;
 }
 
 #footer #social-profiles a svg {
-  width: 50px;
-  margin: 0 5px;
+    width: 50px;
+    margin: 0 5px;
 }
 
 #footer #copyright {
-  text-align: center;
-  color: white;
+    text-align: center;
+    color: white;
 }
 
 #footer .footer-links {
-  text-align: center;
+    text-align: center;
 }
 
 #footer .footer-links a {
-  color: white;
+    color: white;
 }
 
 #footer .footer-links a:hover {
-  color: black;
+    color: black;
 }
 
 @media (max-width: 750px) {
-  .alert {
-    width: 100%;
-  }
+    .alert {
+        width: 100%;
+    }
 
-  nav {
-    height: 75px;
-  }
+    nav {
+        height: 75px;
+    }
 
-  #header {
-    height: 300px;
-  }
+    #header {
+        height: 300px;
+    }
 
-  #header #header-content h1 {
-    text-align: center;
-  }
+    #header #header-content h1 {
+        text-align: center;
+    }
 
-  #header #header-content h1.go-to-navbar {
-    width: 100%;
-    left: 0;
-    top: 28px;
-    text-align: center;
-    letter-spacing: -0.04em;
-  }
+    #header #header-content h1.go-to-navbar {
+        width: 100%;
+        left: 0;
+        top: 28px;
+        text-align: center;
+        letter-spacing: -0.04em;
+    }
 
-  main {
-    width: 95%;
-    margin: 25px auto;
-  }
+    main {
+        width: 95%;
+        margin: 25px auto;
+    }
 
-  #newsletter #newsletter-content {
-    width: 95%;
-    margin: 25px auto;
-  }
+    #newsletter #newsletter-content {
+        width: 95%;
+        margin: 25px auto;
+    }
 
-  #newsletter input, #newsletter button {
-    width: 100%;
-  }
+    #newsletter input, #newsletter button {
+        width: 100%;
+    }
 }
