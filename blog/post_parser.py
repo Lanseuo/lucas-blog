@@ -1,6 +1,7 @@
 import markdown
 import re
 
+from . import meta
 from datetime import datetime
 
 
@@ -50,7 +51,7 @@ class PostParser:
 
     def set_target_for_links(self, html):
         def replace(a):
-            if "http" in a and "https://blog.lucas-hild.de" not in a:
+            if "http" in a and meta.site_url not in a:
                 href = re.match(r"<a href=\"([^\"]*)\">", a).group(1)
                 return f'<a href="{href}" target="_blank">'
 
