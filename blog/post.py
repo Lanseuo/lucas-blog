@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from . import top_level_path
 from .errors import PostNotFound
 from .post_parser import PostParser
@@ -38,6 +40,9 @@ class Post:
             "description": self.description,
             "content": self.content
         }
+
+    def is_published(self):
+        return datetime.now() > self.date
 
     def get_readable_date(self):
         months = ["Januar", "Februar", "März", "April", "Mai", "Juni",

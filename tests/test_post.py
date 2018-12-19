@@ -1,4 +1,5 @@
 import pytest
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from blog.post import Post
@@ -24,3 +25,11 @@ def test_to_json(post):
     assert "image" in json.keys()
     assert "description" in json.keys()
     assert "content" in json.keys()
+
+
+def test_is_published(post):
+    assert post.is_published()
+
+    tomorrow = datetime.now() + timedelta(days=1)
+    post.date = tomorrow
+    assert not post.is_published()

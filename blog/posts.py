@@ -23,7 +23,9 @@ class Posts:
             )
 
             post = Post(permalink)
-            posts.append(post)
+
+            if post.is_published():
+                posts.append(post)
 
         # Reverse order of posts, so that newest post is the first one
         posts = posts[::-1]
