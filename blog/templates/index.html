@@ -2,7 +2,7 @@
 
 <div id="posts-grid">
     {% for post in posts %}
-    <a class="post-preview" href="{{ url_for('post_view', permalink=post.permalink) }}">
+    <a class="post-preview" href="{{ url_for('post', permalink=post.permalink) }}">
         <div class="background" style="background-image: url({{ post.image }})"></div>
 
         <div class="content">

@@ -26,24 +26,8 @@ def index():
     )
 
 
-@app.route("/api/posts")
-def api_posts():
-    posts = [post.to_json() for post in Posts.get_posts()]
-    return jsonify(posts)
-
-
-@app.route("/api/posts/<string:permalink>")
-def api_post(permalink):
-    try:
-        post = Post(permalink)
-    except PostNotFound:
-        return jsonify({"error": "post not found"}), 404
-
-    return jsonify(post.to_json())
-
-
 @app.route("/<string:permalink>")
-def post_view(permalink):
+def post(permalink):
     try:
         post = Post(permalink)
     except PostNotFound:
@@ -69,6 +53,22 @@ def post_view(permalink):
         description=post.description,
         content=post.content
     )
+
+
+@app.route("/api/posts")
+def api_posts():
+    posts = [post.to_json() for post in Posts.get_posts()]
+    return jsonify(posts)
+
+
+@app.route("/api/posts/<string:permalink>")
+def api_post(permalink):
+    try:
+        post = Post(permalink)
+    except PostNotFound:
+        return jsonify({"error": "post not found"}), 404
+
+    return jsonify(post.to_json())
 
 
 @app.route("/feed")
@@ -110,7 +110,7 @@ def one_signal_sdk_worker_js():
 
 @app.route("/<int:year>/<int:month>/<permalink>")
 def wp_post_redirect(year, month, permalink):
-    return redirect(url_for("post_view", permalink=permalink))
+    return redirect(url_for("post", permalink=permalink))
 
 
 @app.route("/wp-content/uploads/<int:year>/<int:month>/<string:permalink>/<string:filename>")
