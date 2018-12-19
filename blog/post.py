@@ -53,3 +53,6 @@ class Post:
         year = self.date.year
 
         return "{}. {} {}".format(day, month, year)
+
+    def __lt__(self, other):
+        return self.date > other.date

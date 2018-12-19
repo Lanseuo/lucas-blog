@@ -1,3 +1,4 @@
+site_author = "Lucas Hild"
 site_title = "Lucas Blog"
 site_subtitle = "Softwareentwicklung"
 site_full_title = site_title + " - " + site_subtitle
