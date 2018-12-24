@@ -1,21 +1,16 @@
 import os
 from PIL import Image
 
+from blog import top_level_path
 
 post_folders = [
-    os.path.dirname(os.path.realpath(__file__)) + "/static/posts/" + folder
-    for folder
-    in os.listdir(
-        os.path.dirname(os.path.realpath(__file__)) + "/static/posts"
-    )
+    folder for folder in (top_level_path / "blog/static/posts").iterdir()
 ]
 
 for folder in post_folders:
     images_in_post_folder = [
-        folder + "/" + image
-        for image
-        in os.listdir(folder)
-        if image.lower().endswith((".jpg", ".png"))
+        image for image in folder.iterdir()
+        if image.name.lower().endswith((".jpg", ".png"))
     ]
 
     for image in images_in_post_folder:
