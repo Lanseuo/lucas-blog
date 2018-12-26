@@ -3,11 +3,20 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from blog.post import Post
+from blog.errors import PostNotFound
 
 
 @pytest.fixture
 def post():
     return Post("hallo-welt")
+
+
+def test_nonexistent_permalink():
+    try:
+        Post("i-do-not-exist")
+        assert False
+    except PostNotFound:
+        assert True
 
 
 def test_get_markdown_file_path(post):

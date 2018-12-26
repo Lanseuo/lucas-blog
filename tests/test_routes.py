@@ -26,6 +26,12 @@ def test_post(test_client):
     assert response.status_code == 200
 
 
+def test_nonexistent_post(test_client):
+    response = test_client.get("/i-do-not-exist")
+    assert response.status_code == 404
+    assert b"nicht gefunden" in response.data
+
+
 def test_api_posts(test_client):
     response = test_client.get("/api/posts")
     assert response.status_code == 200
@@ -50,6 +56,14 @@ def test_api_post(test_client):
     assert "image" in post.keys()
     assert "permalink" in post.keys()
     assert "title" in post.keys()
+
+
+def test_api_nonexistent_post(test_client):
+    response = test_client.get("/api/posts/i-do-not-exist")
+    assert response.status_code == 404
+    assert response.json == {
+        "error": "post not found"
+    }
 
 
 def test_feed(test_client):
