@@ -3,6 +3,7 @@
 My markdown blogging system.
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
+![](https://img.shields.io/circleci/project/github/Lanseuo/lucas-blog/master.svg?style=flat-square)
 
 ## Add new post
 
@@ -35,6 +36,12 @@ Compress images before uploading them.
 
 ```
 python3 compress_images.py
+```
+
+Share on Twitter and send notification
+
+```
+python3 published_post.py
 ```
 
 ## Made with
