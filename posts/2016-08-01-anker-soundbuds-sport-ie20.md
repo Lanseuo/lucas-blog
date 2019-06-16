@@ -4,7 +4,9 @@ image: DSC_0024.JPG
 description: In diesem Beitrag teste ich Sportkopfhörer von Anker, die trotz ihres geringen Preises eine gute Soundqualität aufweisen können.
 ---
 
-Wer gerade auf der Suche nach günstige Sportkopfhörern ist sollte sich unbedingt die Anker SoundBuds Sport IE20 anschauen. Diese sind In-Ear Kopfhörer, die über Bluetooth angesteuert werden. Trotz des sehr günstigen Preises, von derzeit 30€, muss die die Soundqualität der Kopfhörer nicht leiden.
+**Update 2019:** Mittlerweile sind die [Anker SoundBuds Sport IE20*](https://amzn.to/2FcZdal) nicht mehr verfügbar. Als Alternative kann ich die [Anker Soundcore Spirit X*](https://amzn.to/2IitFC2) empfehlen.
+
+Wer gerade auf der Suche nach günstige Sportkopfhörern ist sollte sich unbedingt die [Anker SoundBuds Sport IE20*](https://amzn.to/2FcZdal) anschauen. Diese sind In-Ear Kopfhörer, die über Bluetooth angesteuert werden. Trotz des sehr günstigen Preises, von derzeit 30€, muss die die Soundqualität der Kopfhörer nicht leiden.
 
 # Lieferumfang
 
@@ -28,4 +30,4 @@ Um die Kopfhörer in den Paring-Modus zu versetzen, müssen die beiden Ohrteile 
 
 # Sound
 
-Die Kopfhörer sitzen dank den verschiedenen Aufsätzen und Haken gut im Ohr und fallen auch beim Sport nicht heraus. Ich finde die Kopfhörer äußerst angenehm, da sie nicht drücken oder ähnliches. Das Kabel wird hinter dem Kopf, am Nacken, platziert und ist nicht unangenehm. Der Sound ist für den Preis von 30€ nicht schlecht, aber auch nicht besonders überraschend. Man kriegt was man auch erwarten kann. Die Bässe kommen gut rüber. Damit ist die Qualität völlig im grünen Bereich. Abschließend kann ich sagen, dass sich diese Kopfhörer wirklich lohnen. Einen super Sound kann man nicht erwarten, aber für Podcasts und zwischendurch ein paar Lieder sind sie sicher empfehlenswert. Für den Sport sind die Kopfhörer auch gut, aber nicht super. [Bei Amazon kaufen](https://www.amazon.de/Anker-SoundBuds-Bluetooth-Reduzierung-8-Stunden-Spielzeit/dp/B01DZXFB1Q/ref=sr_1_1?ie=UTF8&qid=1470658333&sr=8-1&keywords=)
+Die Kopfhörer sitzen dank den verschiedenen Aufsätzen und Haken gut im Ohr und fallen auch beim Sport nicht heraus. Ich finde die Kopfhörer äußerst angenehm, da sie nicht drücken oder ähnliches. Das Kabel wird hinter dem Kopf, am Nacken, platziert und ist nicht unangenehm. Der Sound ist für den Preis von 30€ nicht schlecht, aber auch nicht besonders überraschend. Man kriegt was man auch erwarten kann. Die Bässe kommen gut rüber. Damit ist die Qualität völlig im grünen Bereich. Abschließend kann ich sagen, dass sich diese Kopfhörer wirklich lohnen. Einen super Sound kann man nicht erwarten, aber für Podcasts und zwischendurch ein paar Lieder sind sie sicher empfehlenswert. Für den Sport sind die Kopfhörer auch gut, aber nicht super. [Bei Amazon kaufen*](https://amzn.to/2FcZdal)

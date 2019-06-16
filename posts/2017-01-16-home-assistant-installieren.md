@@ -4,7 +4,9 @@ image: DSC_0007.JPG
 description: Hier zeige ich Dir, wie Du die Heimautomatisierungs-Software Home Assistant auf deinem Raspberry Pi installierst und einrichtest.
 ---
 
-[Home Assistant](https://home-assistant.io/) ist eine relative junge Heimautomatisierungs-Software, die in Python geschrieben wurde. Das ganze Projekt ist open-source und lässt sich mit dem Raspberry Pi als Basis schnell und einfach installieren. Der Raspberry Pi eignet sich besonders gut für ein Heimautomatisierungsprojekt, da er nicht viel Strom verbraucht, wenn er durchgehend läuft und man Hardware-Komponente einfach über die GPIO-Ports anschließen kann. Die Software hat eine breite Basis an [Komponenten](https://home-assistant.io/components/) und unterstützt die wichtigsten Protokolle und Schnittstellen. Außerdem gibt es eine schicke Weboberfläche, die auch nach den eigenen Wünschen angepasst werden kann. Ich verwende für dieses Projekt den Raspberry Pi 3 Model B und Home Assistant in der Version 0.35.
+[Home Assistant](https://home-assistant.io/) ist eine relative junge Heimautomatisierungs-Software, die in Python geschrieben wurde. Das ganze Projekt ist open-source und lässt sich mit dem Raspberry Pi als Basis schnell und einfach installieren. Der Raspberry Pi eignet sich besonders gut für ein Heimautomatisierungsprojekt, da er nicht viel Strom verbraucht, wenn er durchgehend läuft und man Hardware-Komponente einfach über die GPIO-Ports anschließen kann. Die Software hat eine breite Basis an [Komponenten](https://home-assistant.io/components/) und unterstützt die wichtigsten Protokolle und Schnittstellen. Außerdem gibt es eine schicke Weboberfläche, die auch nach den eigenen Wünschen angepasst werden kann. Ich verwende für dieses Projekt den [Raspberry Pi 3 Model B*](https://amzn.to/2X9Qy2T) und Home Assistant in der Version 0.35.
+
+In mein Home Assistant habe ich mittlerweile unter anderem mehrere [Yeelights*](https://amzn.to/2IjNvgc), einen [LED-Strip*](https://amzn.to/2IjLUXB) mit einem [NodeMCU (ESP8266)*](https://amzn.to/2IjNDMI) und unser bestehendes [Sonos System*](https://amzn.to/2ILpb5X) eingebunden.
 
 # Image aufsetzen
 

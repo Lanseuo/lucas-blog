@@ -4,7 +4,7 @@ image: DSC_0067.JPG
 description: Der preiswerte NodeMCU ESP8266 lässt sich mit MicroPython programmieren. Somit kann man Sensoren über das Internet auslesen und Ausgabegeräte steuern.
 ---
 
-Der [NodeMCU ESP8266](https://de.aliexpress.com/item/New-Wireless-module-NodeMcu-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266-with-pcb-Antenna/32656775273.html?spm=2114.010208.3.9.yc6p9M&ws_ab_test=searchweb0_0,searchweb201602_5_10152_10065_10151_10068_5010016_10136_10157_10137_10060_10138_10155_10062_10156_437_10154_10056_10055_10054_10059_303_100031_10099_10103_10102_10101_10096_10147_10052_10053_10050_10107_10142_10051_5190016_10084_10083_10080_10082_10081_10177_10110_519_10111_10112_10113_10114_10181_10180_10183_10182_10185_10184_10078_10079_10073_10186_10123_142-10050,searchweb201603_2,ppcSwitch_5&btsid=8b697f6b-cb57-4455-ae4e-d61c41bf8f74&algo_expid=cff18fe0-d993-41df-a51c-c0eca36ac24b-4&algo_pvid=cff18fe0-d993-41df-a51c-c0eca36ac24b) ist ein Microcontroller, der wirklich sehr preiswert ist. Auf ihm befindet sich ein WIFI-Chip und 30 GPIO-Ports, mit denen Hardware angesprochen werden kann. Durch seinen niedrigen Preis und den geringen Energieverbrauch, eignet er sich besonders gut für IoT (Internet of Things) Projekte. Man kann zum Beispiel einige Sensoren an den ESP8266 anschließen, die man dann über WIFI an das [SmartHome-System](https://blog.lucas-hild.de/2017/01/home-assistant-installieren/) überträgt. Oder man kann eine LED-Leiste anschließen, die man dann über das Smartphone steuern kann.
+Der [NodeMCU ESP8266*](https://amzn.to/2FbCewm) ist ein Microcontroller, der wirklich sehr preiswert ist. Auf ihm befindet sich ein WIFI-Chip und 30 GPIO-Ports, mit denen Hardware angesprochen werden kann. Durch seinen niedrigen Preis und den geringen Energieverbrauch, eignet er sich besonders gut für IoT (Internet of Things) Projekte. Man kann zum Beispiel einige Sensoren an den ESP8266 anschließen, die man dann über WIFI an das [SmartHome-System](https://blog.lucas-hild.de/2017/01/home-assistant-installieren/) überträgt. Oder man kann eine LED-Leiste anschließen, die man dann über das Smartphone steuern kann.
 
 Eine Sache hat mich aber an dem NodeMCU gestört: Normalerweise muss die Software in Lua oder C geschrieben werden. Da ich aber ein absoluter Fan von Python bin, habe ich mich nach einer Lösung umgeschaut, wie man Python auf einem ESP8266 zum Laufen bekommt. Dabei stieß ich auf ein Projekt mit dem Namen [MicroPython](https://micropython.org/). Dies erlaubt es einem, Python für einen Microcontroller zu schreiben. MicroPython ist sehr ähnlich wie das normale CPython und im Großteil auch kompatibel. Trotzdem gibt es einige [kleine Unterschiede](http://docs.micropython.org/en/latest/esp8266/genrst/index.html) und leider können auch nur sehr wenige [Libraries](http://docs.micropython.org/en/latest/esp8266/library/index.html) importiert werden.
 
@@ -22,11 +22,11 @@ Als nächstes schließen wir den Chip über den MicroUSB-Port an den Computer an
 
 Als nächstes lädst Du dir die Firmware von MicroPython herunter. Diese findest Du auf der [Download-Seite von MicroPython](http://micropython.org/download#esp8266). Wähle hier die Version mit dem Namen *latest* aus und lade diese auf deinen Computer herunter. Nun wollen wir MicroPython auf unserem ESP8266 installieren. Bei dem folgenden Befehl, müssen wir noch den Dateiname von der Firmware, die wir gerade heruntergeladen, am Ende anpassen. Versuche es erst mit:
 
-    esptool.py --port /dev/ttyUSB0 --baud 460800 write\_flash --flash\_size=detect 0 esp8266-20170108-v1.8.7.bin
+    esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 esp8266-20170108-v1.8.7.bin
 
 Wenn das **nicht** geklappt hat, versuche es mit diesem Befehlt:
 
-    esptool.py --port /dev/ttyUSB0 --baud 460800 write\_flash --flash\_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
+    esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect -fm dio 0 esp8266-20170108-v1.8.7.bin
 
 Wenn jetzt hier kein Fehler angezeigt wird, solltest Du mit MicroPython erfolgreich installiert haben. Falls es nicht geklappt hat, kannst Du mal auf [dieser Webseite](http://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/intro.html#intro) vorbeischauen oder mir einen Kommentar schreiben.
 
@@ -135,4 +135,4 @@ Nun kannst Du dich mit deinem Smartphone mit dem WIFI-Netzwerk des ESP8266 verbi
     >>> sta_if.isconnected()
     >>> sta_if.ifconfig()
 
-Nun könntest Du einen HTTP Webserver aufsetzen, über den Du deine Hardware steuerst.   Meiner Meinung nach ist MicroPython ein richtig tolles Projekt. Ich werde in Zukunft noch einige Sensoren und Ausgabegeräte mit dem ESP8266 bauen, die ich auch in mein SmartHome-System einbinden werde. Wenn ihr Lust habt, könnt ihr euch einen NodeMCU bestellen, auf dem ihr dann Python zum Laufen bringt. Viel Spaß!
+Nun könntest Du einen HTTP Webserver aufsetzen, über den Du deine Hardware steuerst. Meiner Meinung nach ist MicroPython ein richtig tolles Projekt. Ich werde in Zukunft noch einige Sensoren und Ausgabegeräte mit dem ESP8266 bauen, die ich auch in mein SmartHome-System einbinden werde. Wenn ihr Lust habt, könnt ihr euch einen [NodeMCU bestellen*](https://amzn.to/2FbCewm), auf dem ihr dann Python zum Laufen bringt. Viel Spaß!

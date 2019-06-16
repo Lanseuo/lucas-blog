@@ -4,7 +4,7 @@ image: DSC_0481.JPG
 description: LineageOS ist eine offene Alternative zum normalen Android. In dieser Anleitung zeige ich dir Schritt für Schritt, wie Du die CustomROM installieren kannst.
 ---
 
-Seit einigen Monaten ist mein Smartphone schon sehr langsam. Deswegen habe ich mich nach einem alternativen Betriebssystem umgesehen. Dabei fiel mir natürlich als erstes Lineage OS ein. Dies ist eine freie CustomROM für Android-Geräte. LineageOS gefällt mir besonders gut, da es sehr viele Möglichkeiten zur Anpassung gibt und das alternative Betriebssystem einem viel Privatsphäre bietet. In dieser Anleitung zeige ich dir, wie Du LineageOS auf deinem Smartphone installierst. Ich habe hierfür ein Moto G (2014) verwenden. Mit den meisten Smartphone sollte es aber ähnlich funktionieren.
+Seit einigen Monaten ist mein Smartphone schon sehr langsam. Deswegen habe ich mich nach einem alternativen Betriebssystem umgesehen. Dabei fiel mir natürlich als erstes Lineage OS ein. Dies ist eine freie CustomROM für Android-Geräte. LineageOS gefällt mir besonders gut, da es sehr viele Möglichkeiten zur Anpassung gibt und das alternative Betriebssystem einem viel Privatsphäre bietet. In dieser Anleitung zeige ich dir, wie Du LineageOS auf deinem Smartphone installierst. Ich habe hierfür ein [Moto G (2014)*](https://amzn.to/2InVkBH) verwenden. Mit den meisten Smartphone sollte es aber ähnlich funktionieren.
 
 ![Startbildschirm von LineageOS](DSC_0490.JPG)
 

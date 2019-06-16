@@ -4,7 +4,7 @@ image: amazon-alexa-entwickeln-lucas-hild.JPG
 description: Für den Amazon Echo Dot lassen sich mit Hilfe von Flask-Ask eigene Skills entwickeln. Ich zeige dir, wie Du diese Alexa Skills mit Python erstellen kannst.
 ---
 
-Der Amazon Echo (Dot) ist eine smarter Lautsprecher, den man über Sprachbefehle steuern kann. Von Haus aus hat Alexa, die Software, die hinter dem Echo steht, bereits viele Funktionen und Möglichkeiten. Jedoch kann man auch eigene Skills für Alexa bauen. Besonders faszinierend finde ich Alexa auch, da es nicht wirklich schwer ist, neue Skills hinzuzufügen. Für die Entwicklung eines Alexa Skills habe ich mich für die Library Flask-Ask entschieden, die in Python geschrieben ist.
+Der [Amazon Echo*](https://amzn.to/2Riy4HN) ist ein smarter Lautsprecher, den man über Sprachbefehle steuern kann. Von Haus aus hat Alexa, die Software, die hinter dem Echo steht, bereits viele Funktionen und Möglichkeiten. Jedoch kann man auch eigene Skills für Alexa bauen. Besonders faszinierend finde ich Alexa auch, da es nicht wirklich schwer ist, neue Skills hinzuzufügen. Für die Entwicklung eines Alexa Skills habe ich mich für die Library Flask-Ask entschieden, die in Python geschrieben ist.
 
 Zuerst müssen wir uns überlegen, was unser Skill überhaupt können soll. Ich habe mich in diesem Tutorial für ein einfaches Spiel entschieden, bei dem man eine bestimmte Zahl erraten muss.
 
@@ -229,6 +229,6 @@ Ein Gespräch könnte wie folgst aussehen:
 ![Amazon Echo Dot mit Alexa](alexa-echo-dot-lucas-hild.JPG)
 
 
-Nun hast Du Deinen ersten eigenen Alexa Skill erstellt. In diesem Tutorial haben wir nur einen sehr einfachen Skill programmiert. Denkbar wären noch weitere Funktionen, wie zum Beispiel Highscores oder mehrere Schwierigkeitsstufen. Für weitere Informationen kann ich dir die Dokumentation von Flask-Ask und die offizielle Dokumentation von Amazon empfehlen.
+Nun hast Du Deinen ersten eigenen Alexa Skill für Deinen [Echo*](https://amzn.to/2Riy4HN) erstellt. In diesem Tutorial haben wir nur einen sehr einfachen Skill programmiert. Denkbar wären noch weitere Funktionen, wie zum Beispiel Highscores oder mehrere Schwierigkeitsstufen. Für weitere Informationen kann ich dir die Dokumentation von Flask-Ask und die offizielle Dokumentation von Amazon empfehlen.
 
 > Welche Skills hast Du schon entwickelt oder möchtest Du noch bauen?

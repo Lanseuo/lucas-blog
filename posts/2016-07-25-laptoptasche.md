@@ -10,9 +10,9 @@ Heute hat jeder ein Smartphone, Tablet oder Laptop. Um unsere technischen Gerät
 
 Um die Tasche herzustellen brauchst Du folgende Materialien:
 
-- Filz
-- Elastic-Band
-- Maßband
+- [Filz*](https://amzn.to/2WKUOl5)
+- [Elastic-Band*](https://amzn.to/2WMiV2x)
+- [Maßband*](B000XJ02LU)
 - Schwere
 - Sticknadeln
 - Klammern
@@ -45,4 +45,4 @@ Damit die Ecken der Lasche durch das Gummi passen, müssen diese abgerundet werd
 
 ![](DSC_0008.JPG)
 
-Jetzt ist deine Laptoptasche fertig und Dein Laptop ist vor Schmutz und Dreck geschützt. Viel Spaß beim Nachmachen!
+Jetzt ist Deine Laptoptasche fertig und Dein Laptop ist vor Schmutz und Dreck geschützt. Viel Spaß beim Nachmachen!

@@ -4,9 +4,9 @@ image: wordpress-923188_960_720.jpg
 description: Hier erkläre ich dir, wie Du Wordpress mit einer .tk-Domain einrichtet. Dafür verwenden wir freenom zur Domainregistrierung und Hostinger als Webhoster.
 ---
 
-> Leider bin ich nicht mehr mit Hostinger zufrieden. Diese Webseite hoste ich bei [Uberspace](https://blog.lucas-hild.de/2017/03/uberspace/).
+> Leider bin ich nicht mehr mit Hostinger zufrieden. Diese Webseite hoste ich mittlerweile bei [Uberspace](https://blog.lucas-hild.de/2017/03/uberspace/).
 
-In dieser Anleitung erkläre ich dir, wie Du dir eine Domain erstellst und bei einem Hosting-Anbieter Wordpress installierst. Dafür verwende ich eine kostenlose .tk-Domain und den kostenlosen Hosting-Anbieter [Hostinger](http://api.hostinger.de/redir/17957423). Für diese Anleitung brauchst Du keinerlei Vorkenntnisse.
+In dieser Anleitung erkläre ich dir, wie Du dir eine Domain erstellst und bei einem Hosting-Anbieter Wordpress installierst. Dafür verwende ich eine kostenlose .tk-Domain und den kostenlosen Hosting-Anbieter [Hostinger](http://hostinger.de). Für diese Anleitung brauchst Du keinerlei Vorkenntnisse.
 
 # Domain registrieren
 

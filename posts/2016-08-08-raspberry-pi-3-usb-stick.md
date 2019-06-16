@@ -4,7 +4,7 @@ image: DSC_0004.JPG
 description: In dieser Anleitung erfährst du Schritt-für-Schritt, wie Du an einem Raspberry Pi 3 von einem USB-Stick oder von einer Fesplatte booten kannst.
 ---
 
-Vor ein paar Tagen hat die [Raspberry Pi Foundation](https://www.raspberrypi.org/blog/pi-3-booting-part-i-usb-mass-storage-boot/) angekündigt, dass man mit der neuen Beta auch von einem USB-Stick oder einer Festplatte booten kann. Ich finde das sehr praktisch, da man so nicht immer das Gehäuse auseinander schrauben muss, nur um die SD-Karte auszutauschen, wenn man mal ein anderes Betriebssystem ausprobieren will. Diese Funktion ist aber nur für den neuen Raspberry Pi 3 verfügbar und es werden außerdem auch noch nicht alle USB-Sticks unterstützt.
+Vor ein paar Tagen hat die [Raspberry Pi Foundation](https://www.raspberrypi.org/blog/pi-3-booting-part-i-usb-mass-storage-boot/) angekündigt, dass man mit der neuen Beta auch von einem USB-Stick oder einer Festplatte booten kann. Ich finde das sehr praktisch, da man so nicht immer das Gehäuse auseinander schrauben muss, nur um die SD-Karte auszutauschen, wenn man mal ein anderes Betriebssystem ausprobieren will. Diese Funktion ist aber nur für den neuen [Raspberry Pi 3*](https://amzn.to/2Xf0MyJ) verfügbar und es werden außerdem auch noch nicht alle USB-Sticks unterstützt.
 
 # Unterstützte USB-Sticks
 
@@ -96,4 +96,4 @@ Nun wird der USB-Stick noch ausgeworfen und der Raspberry Pi wird neu gestartet.
     sudo umount /mnt/target
     sudo poweroff
 
-Als letzten Schritt nimmst Du den Pi vom Strom, entfernst die SD-Karte und steckst das Netzteil wieder ein. Nun sollte der Raspberry Pi von der SD-Karte starten. Dieser Vorgang dauert etwas länger, als der normale Start von der SD-Karte.
+Als letzten Schritt nimmst Du den Pi vom Strom, entfernst die SD-Karte und steckst das Netzteil wieder ein. Nun sollte der [Raspberry Pi*](https://amzn.to/2IkDpvu) von der SD-Karte starten. Dieser Vorgang dauert etwas länger, als der normale Start von der SD-Karte.
