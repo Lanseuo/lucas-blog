@@ -21,7 +21,7 @@ input:required:invalid {
     outline: none;
 }
 
-p, a {
+p, a, li {
     font-family: 'Mukta Mahee', sans-serif;
     font-size: 1.1em;
 }
@@ -381,7 +381,8 @@ main {
 
 #footer {
     background-color: var(--primary-color);
-    padding: 10px 0;
+    padding: 10px 250px;
+    color: white;
 }
 
 #footer #social-profiles {
@@ -396,7 +397,6 @@ main {
 
 #footer #copyright {
     text-align: center;
-    color: white;
 }
 
 #footer .footer-links {
@@ -409,6 +409,11 @@ main {
 
 #footer .footer-links a:hover {
     color: black;
+}
+
+#footer .fotnote {
+    font-size: 0.8em;
+    text-align: center;
 }
 
 @media (max-width: 750px) {
@@ -448,5 +453,9 @@ main {
 
     #newsletter input, #newsletter button {
         width: 100%;
+    }
+
+    #footer {
+        padding: 10px;
     }
 }
