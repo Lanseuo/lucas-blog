@@ -2,7 +2,7 @@ Flask==1.0.3
 Flask-Cors==3.0.8
 Markdown==3.1.1
 onesignal-notifications==0.2.5
-Pillow==6.0.0
+Pillow==6.2.0
 pytest==4.6.3
 python-twitter==3.5
 requests==2.22.0
